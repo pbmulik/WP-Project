@@ -1,0 +1,117 @@
+<html><head>
+  <title></title>
+  
+</head>
+<body style="background-image: url(images/background4.jpg);">
+<br>
+<br>
+<form name="htmlforms" onsubmit="return allletter()">
+<form name="htmlforms" onsubmit="return validate()" >
+<form name="htmlforms" onsubmit="return validate1()" >  
+
+<form method="post" action="addpatient.php" ><big><big>Patient
+Info :<br>
+  <br>
+  </big></big>
+  <table width:="50%">
+    <tbody>
+      <tr>
+        <td>Full Name :<br>
+        </td>
+        <td><input name="name" type="text"><br>                 
+        </td>
+      </tr>
+      <tr>
+        <td>Patient ID : <br>
+        </td>
+        <td><input name="id" type="text"><br>
+        </td>
+      </tr>
+      <tr>
+        <td>Age : <br>
+        </td>
+        <td><input name="age" type="text"><br>
+        </td>
+      </tr>
+      <tr>
+        <td>Gender : <br>
+        </td>
+        <td><input name="gender" type="text"><br>
+        </td>
+      </tr>
+      <tr>
+        <td>Occupation : <br>
+        </td>
+        <td><input name="occupation" type="text"><br>
+        </td>
+      </tr>
+      <tr>
+        <td>Contact Number<br>
+        </td>
+        <td><input name="mobile" type="text"><br>
+        </td>
+      </tr>
+      <tr>
+        <td>Address<br>
+        </td>
+        <td><textarea cols="30" rows="3" name="address"></textarea> </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <input name="submit" value="ADD" type="submit">&nbsp; &nbsp; <input name="reset" value="RESET" type="reset"> <big><big><br>
+  </big></big></form>
+  </body>
+</html>
+  
+  
+  
+  
+<script type="text/javascript">
+function allletter()
+{
+var letters=/^[A-Za-z]+$/;
+if(document.htmlforms.name.value.match(letters))
+{
+document.htmlforms.id.focus();
+return true;
+}
+else
+{
+alert("Enter proper name");
+document.htmlforms.name.focus();
+return false;
+}
+} 
+
+ 
+  
+  
+  
+  
+function validate(){  
+var num=document.htmlforms.age.value;  
+if (isNaN(num)){  
+  document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+  return false;  
+}else{  
+  return true;  
+  }  
+}   
+  
+
+
+
+function validate1(){  
+var num1=document.htmlforms.mobile.value;  
+if (isNaN(num1)){  
+  document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+  return false;  
+}else{  
+  return true;  
+  }  
+}  
+</script>   
+
+
